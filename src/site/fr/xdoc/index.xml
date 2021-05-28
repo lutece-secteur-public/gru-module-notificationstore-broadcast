@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Plugin grustoragedb-broadcast</title>
+    </properties>
+    <head>
+        <!-- Keywords example : "cms, authentication, cms, workflow, seo, collaborative, ..." 
+             Use the language of this xdoc -->
+        <meta name="keywords" content="gru, mail, notification" />
+    </head>
+    <body>
+        <section name="Plugin grustoragedb-broadcast">
+            <!--
+            <p>
+                <img src="images/grustoragedb-broadcast.png" />
+            </p>
+            -->
+            <subsection name="Introduction">
+                <p>Envoi de mails correspondants</p>
+                <p>Gestion des abonnements aux alerts par demand_type_id et statut.</p>
+            </subsection>
+            <subsection name="Configuration">
+                <p>Daemon should be configured to 1hour.</p>
+                <p>Seules les alerts de notifications en erreur sont concernées.</p>
+            </subsection>
+            <subsection name="Usage">
+                <p>Si des évènements de notifications en erreur existent, le mailing est envoyé aux abonnées toutes les heures. </p>
+            </subsection>
+        </section>
+    </body>
+</document>
+

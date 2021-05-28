@@ -1,0 +1,13 @@
+Alerts : ${start?number_to_datetime!''} > ${end?number_to_datetime!''}
+
+<ul>
+<#list notification_event_list as notif>
+<li>
+
+    [${notif..event.eventDate?number_to_datetime!''}] ${notif.event.type!} : <span style="color:red">${notif.event.status} </span></br>
+    Date notification : ${notif.notificationDate?number_to_datetime!''}
+    ID Demand : ${notificationEvent.demand.id} / Id Demand type : ${notificationEvent.demand.typeId}</br>
+    ${notif.event.message}    
+</li>
+</#list>
+</ul>    

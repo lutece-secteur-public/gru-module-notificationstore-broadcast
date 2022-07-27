@@ -61,6 +61,8 @@ public class NotificationAlertBroadcastService
     private static String DEMAND_SERVICE_BEAN_NAME = "grusupply.storageService";
     private static String STATUS_FAILED = "FAILED";
     private static String KEY_NOTIFICATION_EVENT_LIST = "notification_event_list";
+    private static String KEY_START = "start";
+    private static String KEY_END = "end";
     private static String GRU_ESB_DAEMON_NAME = "GRU ESB Notifications Daemon";
     private static String NO_REPLY_EMAIL = "no-reply@paris.fr";
     private static String GRU_ESB_ALERTS_MAIL_SUBJECT = "GRU ESB notifications alerts - demand type : ";
@@ -119,6 +121,9 @@ public class NotificationAlertBroadcastService
             if ( !listEvent.isEmpty( ) )
             {
                 Map<String, Object> model = new HashMap<>( );
+                model.put( KEY_START, startPeriod );
+                model.put( KEY_END, endPeriod );
+                
                 model.put( KEY_NOTIFICATION_EVENT_LIST, listEvent );
 
                 HtmlTemplate template = AppTemplateService.getTemplate( TEMPLATE_MAIL, defaultLocale, model );

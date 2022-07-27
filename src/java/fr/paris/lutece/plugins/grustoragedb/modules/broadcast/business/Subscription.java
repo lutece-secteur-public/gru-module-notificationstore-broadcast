@@ -53,7 +53,7 @@ public class Subscription implements Serializable
     @Size( max = 255, message = "#i18n{module.grustoragedb.broadcast.validation.subscription.Mail.size}" )
     private String _strMail;
 
-    private int _nFrequency;
+    private int _nFrequency = 1;
 
     /**
      * Returns the Id

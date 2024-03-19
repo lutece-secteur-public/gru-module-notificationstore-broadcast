@@ -40,6 +40,7 @@ import fr.paris.lutece.plugins.grustoragedb.modules.broadcast.business.Subscript
 import fr.paris.lutece.portal.service.mail.MailService;
 import fr.paris.lutece.portal.service.spring.SpringContextService;
 import fr.paris.lutece.portal.service.template.AppTemplateService;
+import fr.paris.lutece.portal.service.util.AppPropertiesService;
 import fr.paris.lutece.util.html.HtmlTemplate;
 import java.util.HashMap;
 import java.util.List;
@@ -63,9 +64,14 @@ public class NotificationAlertBroadcastService
     private static String KEY_NOTIFICATION_EVENT_LIST = "notification_event_list";
     private static String KEY_START = "start";
     private static String KEY_END = "end";
-    private static String GRU_ESB_DAEMON_NAME = "GRU ESB Notifications Daemon";
-    private static String NO_REPLY_EMAIL = "no-reply@paris.fr";
-    private static String GRU_ESB_ALERTS_MAIL_SUBJECT = "GRU ESB notifications alerts - demand type : ";
+    
+    private static String PROPERTY_GRU_ALERTS_FROM_NAME ="grustoragedb-broadcast.mail.from.name";
+    private static String PROPERTY_GRU_ALERTS_FROM_MAIL ="grustoragedb-broadcast.mail.from.mail";
+    private static String PROPERTY_GRU_ALERTS_SUBJECT   ="grustoragedb-broadcast.mail.subject";
+    private static String GRU_ALERTS_FROM_NAME = AppPropertiesService.getProperty( PROPERTY_GRU_ALERTS_FROM_NAME, "GRU ESB Notification alerts Daemon" );
+    private static String GRU_ALERTS_FROM_MAIL = AppPropertiesService.getProperty( PROPERTY_GRU_ALERTS_FROM_MAIL, "no-reply@paris.fr" );
+    private static String GRU_ALERTS_SUBJECT = AppPropertiesService.getProperty( PROPERTY_GRU_ALERTS_SUBJECT, "GRU ESB notifications alerts - demand type : %s" );
+    
     // Templates
     private static final String TEMPLATE_MAIL = "/admin/plugins/grustoragedb/modules/broadcast/mail.html";
 
@@ -129,8 +135,8 @@ public class NotificationAlertBroadcastService
                 HtmlTemplate template = AppTemplateService.getTemplate( TEMPLATE_MAIL, defaultLocale, model );
                 String strToList = String.join( ",", mapBroadcastFeedRecipients.get( entry.getKey( ) ) );
 
-                MailService.sendMailHtml( strToList, GRU_ESB_DAEMON_NAME, NO_REPLY_EMAIL,
-                        GRU_ESB_ALERTS_MAIL_SUBJECT + String.valueOf( broadcastFeed.getDemandTypeId( ) ), template.getHtml( ) );
+                MailService.sendMailHtml( strToList, GRU_ALERTS_FROM_NAME, GRU_ALERTS_FROM_MAIL,
+                		String.format(GRU_ALERTS_SUBJECT, String.valueOf( broadcastFeed.getDemandTypeId( ) ) ), template.getHtml( ) );
 
                 nbMailSent++;
                 nbEvent += listEvent.size( );

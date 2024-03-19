@@ -33,7 +33,7 @@
  */
 package fr.paris.lutece.plugins.grustoragedb.modules.broadcast.service;
 
-import fr.paris.lutece.plugins.grubusiness.business.demand.DemandService;
+import fr.paris.lutece.plugins.grubusiness.business.demand.IDemandServiceProvider;
 import fr.paris.lutece.plugins.grubusiness.business.notification.NotificationEvent;
 import fr.paris.lutece.plugins.grustoragedb.modules.broadcast.business.Subscription;
 import fr.paris.lutece.plugins.grustoragedb.modules.broadcast.business.SubscriptionHome;
@@ -109,7 +109,7 @@ public class NotificationAlertBroadcastService
 
         // select last alerts by demand_type_id by frequency
         // & send alert list to subscribers
-        DemandService storageService = SpringContextService.getBean( DEMAND_SERVICE_BEAN_NAME );
+        IDemandServiceProvider storageService = SpringContextService.getBean( DEMAND_SERVICE_BEAN_NAME );
         int nbMailSent = 0;
         int nbEvent = 0;
 

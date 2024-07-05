@@ -10,11 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.paris.lutece.plugins</groupId>
 
-    <artifactId>module-grustoragedb-broadcast</artifactId>
+    <artifactId>module-notificationstore-broadcast</artifactId>
     <packaging>lutece-plugin</packaging>
     
     <version>1.0.1-SNAPSHOT</version>
-    <name>Lutece grustoragedb broadcast module</name>
+    <name>Lutece notificationstore broadcast module</name>
 
     <repositories>
         <repository>
@@ -57,15 +57,15 @@
     </dependencies>
 
     <properties>
-        <componentName>grustoragedb-broadcast</componentName>
+        <componentName>notificationstore-broadcast</componentName>
         <jiraProjectName>GRUSTDBBRD</jiraProjectName>
         <jiraComponentId>GRUSTDBBRD</jiraComponentId>
     </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/lutece-secteur-public/gru-module-grustoragedb-broadcast.git</connection>
-        <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-module-grustoragedb-broadcast.git</developerConnection>
-        <url>https://github.com/lutece-secteur-public/gru-module-grustoragedb-broadcast.git</url>
+        <connection>scm:git:https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</developerConnection>
+        <url>https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</url>
         <tag>HEAD</tag>
     </scm>
 </project>

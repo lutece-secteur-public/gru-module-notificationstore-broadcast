@@ -1,0 +1,48 @@
+<#include "managesubscriptions_tabs.html" />
+<@tabs2 tab="subscription" />
+
+<@box>
+	<@boxHeader title='#i18n{module.notificationstore.broadcast.manage_subscription.title}' boxTools=true>
+		<@tform class='form-inline pull-right' name='manage_subscription' action='jsp/admin/plugins/notificationstore/modules/broadcast/ManageSubscriptions.jsp'>
+			<@button type='submit' name='view_createSubscription' buttonIcon='plus' title='#i18n{module.notificationstore.broadcast.manage_subscriptions.buttonAdd}' />
+		</@tform>
+	</@boxHeader>
+	<@boxBody>    
+    <@messages infos=infos />
+    <@paginationAdmin paginator=paginator combo=1 />
+    <div class="clearfix"></div>
+    <@table>
+        <tr>
+            <input type="hidden" id="id" name="id"/>
+            <th>#i18n{module.notificationstore.broadcast.manage_subscriptions.columnDemandTypeId}</th>
+            <th>#i18n{module.notificationstore.broadcast.manage_subscriptions.columnMail}</th>
+            <th>#i18n{module.notificationstore.broadcast.manage_subscriptions.columnFrequency}</th>
+            <th>#i18n{portal.util.labelActions}</th>
+        </tr>
+        <@tableHeadBodySeparator />
+        <#list subscription_list as subscription >
+        <tr>
+            <input type="hidden" id="id" name="id"/>
+            <td>
+				${subscription.demandTypeId}
+			</td>
+            <td>
+				${subscription.mail}
+			</td>
+            <td>
+				${subscription.frequency}
+			</td>
+        	<td>
+				<@aButton href='jsp/admin/plugins/notificationstore/modules/broadcast/ManageSubscriptions.jsp?view=modifySubscription&id=${subscription.id}' title='#i18n{portal.util.labelModify}' hideTitle=['all'] buttonIcon='pencil' />
+						
+				<@aButton href='jsp/admin/plugins/notificationstore/modules/broadcast/ManageSubscriptions.jsp?action=confirmRemoveSubscription&id=${subscription.id}' title='#i18n{portal.util.labelDelete}' buttonIcon='trash' hideTitle=['all'] color='btn-danger'  />
+
+	        </td>
+        </tr>
+        </#list>
+    </@table>
+
+    <@paginationAdmin paginator=paginator />
+
+  </@boxBody>
+</@box>

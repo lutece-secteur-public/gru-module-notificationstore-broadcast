@@ -1,9 +1,9 @@
-![](https://dev.lutece.paris.fr/jenkins/buildStatus/icon?job=module-grustoragedb-broadcast-deploy)
-[![Alerte](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast&metric=alert_status)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast)
-[![Line of code](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast&metric=ncloc)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast)
-[![Coverage](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast&metric=coverage)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-grustoragedb-broadcast)
+![](https://dev.lutece.paris.fr/jenkins/buildStatus/icon?job=module-notificationstore-broadcast-deploy)
+[![Alerte](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast&metric=alert_status)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast)
+[![Line of code](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast&metric=ncloc)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast)
+[![Coverage](https://dev.lutece.paris.fr/sonar/api/project_badges/measure?project=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast&metric=coverage)](https://dev.lutece.paris.fr/sonar/dashboard?id=fr.paris.lutece.plugins%3Amodule-notificationstore-broadcast)
 
-# Plugin grustoragedb-broadcast
+# Plugin notificationstore-broadcast
 
 ## Introduction
 
@@ -22,7 +22,7 @@ Seules les alerts de notifications en erreur sont concernées.
 Si des évènements de notifications en erreur existent, le mailing est envoyé aux abonnées toutes les heures.
 
 
-[Maven documentation and reports](https://dev.lutece.paris.fr/plugins/module-grustoragedb-broadcast/)
+[Maven documentation and reports](https://dev.lutece.paris.fr/plugins/module-notificationstore-broadcast/)
 
 
 

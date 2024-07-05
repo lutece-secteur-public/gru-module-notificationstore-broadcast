@@ -1,0 +1,10 @@
+<#macro tabs2 tab >
+<@tabs>
+	<@tabList>
+			<li <#if tab="subscription">class="active"</#if>>
+				<@aButton href="jsp/admin/plugins/notificationstore/modules/broadcast/ManageSubscriptions.jsp">#i18n{module.notificationstore.broadcast.manage_subscriptions.pageTitle}</@aButton>
+			</li>
+	</@tabList>
+</@tabs>
+
+</#macro>

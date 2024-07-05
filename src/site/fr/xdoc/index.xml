@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin grustoragedb-broadcast</title>
+        <title>Plugin notificationstore-broadcast</title>
     </properties>
     <head>
         <!-- Keywords example : "cms, authentication, cms, workflow, seo, collaborative, ..." 
@@ -9,10 +9,10 @@
         <meta name="keywords" content="gru, mail, notification" />
     </head>
     <body>
-        <section name="Plugin grustoragedb-broadcast">
+        <section name="Plugin notificationstore-broadcast">
             <!--
             <p>
-                <img src="images/grustoragedb-broadcast.png" />
+                <img src="images/notificationstore-broadcast.png" />
             </p>
             -->
             <subsection name="Introduction">

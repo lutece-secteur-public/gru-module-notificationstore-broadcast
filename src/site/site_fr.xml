@@ -5,13 +5,13 @@
             <item name="EN" href="../index.html" />
         </links>
         
-        <menu name="Plugin grustoragedb-broadcast">
+        <menu name="Plugin notificationstore-broadcast">
             <item name="Accueil" href="index.html"/>
         </menu>
         
         <menu name="Téléchargements" inherit="bottom" >
-            <item name="Versions stables" href="../../../stable_builds/plugins/plugin-grustoragedb-broadcast/"/>
-            <item name="Nightly builds" href="../../../nightly_builds/plugins/plugin-grustoragedb-broadcast/" />
+            <item name="Versions stables" href="../../../stable_builds/plugins/plugin-notificationstore-broadcast/"/>
+            <item name="Nightly builds" href="../../../nightly_builds/plugins/plugin-notificationstore-broadcast/" />
         </menu>
 
     <!--

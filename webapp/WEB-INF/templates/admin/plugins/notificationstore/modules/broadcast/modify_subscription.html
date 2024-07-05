@@ -1,0 +1,24 @@
+<#include "managesubscriptions_tabs.html" />
+<@tabs2 tab="subscription" />
+
+<@box>
+	<@boxHeader title='#i18n{module.notificationstore.broadcast.modify_subscription.title}' />
+	<@boxBody>
+    <@tform class="form-horizontal" method="post" name="modify_subscription" action="jsp/admin/plugins/notificationstore/modules/broadcast/ManageSubscriptions.jsp">
+			<@messages errors=errors />
+			<input type="hidden" id="id" name="id" value="${subscription.id}"/>
+			<input type="hidden" value="${token}" name="token" />
+			
+			<@formGroup labelFor='demand_type_id' labelKey='#i18n{module.notificationstore.broadcast.modify_subscription.labelDemandTypeId}' mandatory=true>
+          		<@input type='text' id='demand_type_id' name='demand_type_id'  value='${subscription.demandTypeId!\'\'}' tabIndex='0' />
+			</@formGroup>
+			<@formGroup labelFor='mail' labelKey='#i18n{module.notificationstore.broadcast.modify_subscription.labelMail}' mandatory=true>
+          		<@input type='text' id='mail' name='mail'  maxlength=255 value='${subscription.mail!\'\'}' tabIndex='1' />
+			</@formGroup>
+			<@formGroup labelFor='frequency' labelKey='#i18n{module.notificationstore.broadcast.modify_subscription.labelFrequency}' mandatory=true>
+          		<@input type='text' id='frequency' name='frequency'  value='${subscription.frequency!\'\'}' tabIndex='2'  readonly=true />
+			</@formGroup>
+        <@actionButtons button1Name="action_modifySubscription" button2Name="view_manageSubscription"/>
+    </@tform>
+	</@boxBody>
+</@box>

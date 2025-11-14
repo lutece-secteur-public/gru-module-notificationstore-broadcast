@@ -12,7 +12,7 @@
     <artifactId>module-notificationstore-broadcast</artifactId>
     <packaging>lutece-plugin</packaging>
     
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <name>Lutece notificationstore broadcast module</name>
 
     <repositories>
@@ -65,6 +65,6 @@
         <connection>scm:git:https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</developerConnection>
         <url>https://github.com/lutece-secteur-public/gru-module-notificationstore-broadcast.git</url>
-        <tag>HEAD</tag>
+        <tag>module-notificationstore-broadcast-1.0.2</tag>
     </scm>
 </project>
